@@ -1,0 +1,14 @@
+#Put me in /lib/systemd/system/
+[Unit]
+Description=domain.thienhang.com
+After=network.target
+
+[Service]
+Type=simple
+User=tian
+WorkingDirectory=/home/tian/Desktop/workplace/monorepo/cmd/dev.thienhang.com
+ExecStart=/home/tian/Desktop/workplace/monorepo/cmd/dev.thienhang.com/dev.thienhang.com --option=123
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
